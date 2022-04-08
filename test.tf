@@ -44,7 +44,7 @@ resource "aws_instance" "empty" {
   }
 }
 
-resource "aws_instance" "wrong" {
+resource "aws_instance" "wrong_team" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.micro"
 
