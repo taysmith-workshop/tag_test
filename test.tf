@@ -53,3 +53,14 @@ resource "aws_instance" "wrong_team" {
     team   =   "bad_dev"
   }
 }
+
+resource "aws_instance" "tricky_split" {
+  ami           = data.aws_ami.ubuntu.id
+  instance_type = "t3.micro"
+
+  tags = {
+    Name   =   "HelloWorld"
+    team   =   "bad_dev"
+    other  =   "dev"
+  }
+}
