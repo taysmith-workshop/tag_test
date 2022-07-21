@@ -19,7 +19,8 @@ resource "aws_instance" "no_tags" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = "HelloWorld"
+    Name      = "HelloWorld"
+    yor_trace = "07d07983-7193-4ff2-9590-021945e20044"
   }
 }
 
@@ -29,8 +30,9 @@ resource "aws_instance" "pass" {
   instance_type = "t3.micro"
 
   tags = {
-    Name   =   "HelloWorld"
-    team   =   "dev"
+    Name      = "HelloWorld"
+    team      = "dev"
+    yor_trace = "d8d53b24-52e2-4d5d-845d-2e923f48dec9"
   }
 }
 
@@ -39,8 +41,9 @@ resource "aws_instance" "empty" {
   instance_type = "t3.micro"
 
   tags = {
-    Name   =   "HelloWorld"
-    team   =   ""
+    Name      = "HelloWorld"
+    team      = ""
+    yor_trace = "0eb187a3-bdcd-4a29-bedb-1b2eb2285bc2"
   }
 }
 
@@ -49,8 +52,9 @@ resource "aws_instance" "wrong_team" {
   instance_type = "t3.micro"
 
   tags = {
-    Name   =   "HelloWorld"
-    team   =   "bad_dev"
+    Name      = "HelloWorld"
+    team      = "bad_dev"
+    yor_trace = "4974d5aa-ab8f-443e-91e8-327e3c6cb8fa"
   }
 }
 
@@ -59,8 +63,9 @@ resource "aws_instance" "tricky_split" {
   instance_type = "t3.micro"
 
   tags = {
-    Name   =   "HelloWorld"
-    team   =   "bad_dev"
-    other  =   "dev"
+    Name      = "HelloWorld"
+    team      = "bad_dev"
+    other     = "dev"
+    yor_trace = "4ccdbadd-1770-4ddb-a85f-4b6ec291e9c8"
   }
 }
